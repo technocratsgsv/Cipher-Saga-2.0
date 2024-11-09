@@ -4,8 +4,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     plugins: [sveltekit(), sentryVitePlugin({
-        org: "krishaay-jois",
-        project: "encryptid"
+        org: "gati-shakti-vishwavidyalaya",
+        project: "ciphersaga-iitm"
     }),],
 
     build: {
