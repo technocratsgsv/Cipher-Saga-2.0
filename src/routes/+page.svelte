@@ -8,7 +8,7 @@
         class="relative flex  h-screen  w-full flex-col items-center justify-center rounded-md  px-32 antialiased"
 >
     <div class="mx-auto max-w-2xl p-4">
-        <Countdown from="2024-05-18 00:42:00" dateFormat="YYYY-MM-DD H:m:s" zone="Asia/Kolkata" let:remaining>
+        <Countdown from="2025-01-03 17:00:00" dateFormat="YYYY-MM-DD H:m:s" zone="Asia/Kolkata" let:remaining>
 
             <p class="relative z-10 mx-auto my-2 max-w-lg text-center font-mono text-sm text-neutral-500">
                 {remaining.days} days, {remaining.hours} hours, {remaining.minutes} minutes, {remaining.seconds} seconds
@@ -17,11 +17,11 @@
         <h2
                 class="relative z-10 bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-center font-sans text-7xl font-bold text-transparent"
         >
-           the final act
+           CryptIQ
         </h2>
         <p></p>
         <p class="relative z-10 mx-auto my-2 max-w-lg text-center text-sm text-neutral-500">
-           welcome the finale of encryptID. we are excited to have you here. get ready to experience twistiest of riddles and the dankest of memes.
+           Where minds meet challenges <br> Think . Connect . Solve
         </p>
 
     </div>
