@@ -33,7 +33,7 @@
                     className="bg-white-300 text-white border-slate-800 text-sm font-bold"
                     onClick={()=>window.location.href = "/ready"}
             >
-                let's go
+                Let's Go
             </Button>
         </div>
     </div>

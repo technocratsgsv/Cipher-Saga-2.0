@@ -42,14 +42,14 @@
         if(r.ok){
             const rdata = await r.json();
             if(rdata.correct){
-                sendSuccessToast("level cleared","your answer was correct");
+                sendSuccessToast("Level cleared","Your answer was correct");
                 if(currQuestion < questions.length - 1) currQuestion++;
 
             } else {
-                sendErrorToast("wrong answer","give it another shot")
+                sendErrorToast("Wrong answer","Give it another shot")
             }
         } else {
-            sendErrorToast("error submitting","something went wrong");
+            sendErrorToast("Error submitting","Something went wrong");
         }
         loading = false;
     };
@@ -77,7 +77,7 @@
             <ArrowLeft/>
         </button>
         <a class="btn btn-ghost text-xl" class:text-success={(teamData.completed_levels || []).includes(currQuestionData.uid)}>
-            level {questions[currQuestion].level+1}/{questions.length}
+            Level {questions[currQuestion].level}/{questions.length}
         </a>
         <button class="btn btn-square mr-4"   on:click={()=>{
             if(!(currQuestion >= questions.length-1)) currQuestion++;
@@ -96,7 +96,7 @@
         </button>
         <button class="btn mr-4">
             <Coin/>
-            {(teamData.level || 1) * 100} points
+            {((teamData.level || 1) * 100) - 100}
         </button>
         <button class="btn " on:click={()=>document.getElementById("logsModal").showModal()}>
             <List/>
@@ -106,18 +106,18 @@
 
 
 <center>
-    <p class="text-sm">question by <b class="text-primary">{currQuestionData.creator}</b></p>
+    <!--<p class="text-sm">Question made by <b class="text-primary">{currQuestionData.creator}</b></p>-->
     <p class="text-4xl mb-4">{currQuestionData.prompt}</p>
     {#if currQuestionData.files.length !== 0}
     <div>
-        <p class="text-lg font-medium">files</p>
+        <p class="text-lg font-medium">Files</p>
         {#each currQuestionData.files as f}
             <span class="link link-primary" on:click={()=>open(f.url)}>{f.name}</span>
             {/each}
     </div>
         {/if}
     {#if currQuestionData.images.length !== 0}
-        <p class="text-lg font-medium mt-4 mb-2">images</p>
+        <p class="text-lg font-medium mt-4 mb-2">Images</p>
     <center class="mb-4">
         <div class="flex justify-center flex-row h-60">
             {#each currQuestionData.images as i}
@@ -129,7 +129,7 @@
         {/if}
 
     {#if !(teamData.completed_levels || []).includes(currQuestionData.uid)}
-        <div class="w-[50%] mb-4"><Input id="answer" placeholder="piedpiper" type="text" onInput={(e)=>{
+        <div class="w-[50%] mb-4"><Input id="answer" placeholder="..." type="text" onInput={(e)=>{
                             answer = e.target.value.replace(" ","");
                             e.target.value = answer;
                       }}/>

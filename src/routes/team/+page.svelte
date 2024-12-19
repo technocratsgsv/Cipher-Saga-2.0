@@ -30,7 +30,7 @@
 </script>
 
 <h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-4xl font-medium tracking-tight text-transparent">
-    your team
+    Your team
 </h2>
 
 
@@ -51,7 +51,7 @@
                }}
        >
            {#if clicked}
-           copied!
+           Copied!
            {:else}{data.code}{/if}
        </Button>
        <!--{#if data.owner}-->
@@ -63,7 +63,7 @@
 
    </center>
     <center>
-        <div class=" mt-4 text-2xl text-secondary">members</div>
+        <div class=" mt-4 text-2xl text-secondary">Members</div>
         <!--{#each data.members as member}-->
         <!--    <div class="text-lg text-white">-->
         <!--        <Doc ref={`users/${member}`} let:data>-->
@@ -87,9 +87,9 @@
         </div>
 
         {#if !data.banned}
-        <button class="btn btn-wide mt-10 btn-outline btn-secondary" disabled={loading} on:click={leaveTeam}>leave team</button>
+        <button class="btn btn-wide mt-10 btn-outline btn-secondary" disabled={loading} on:click={leaveTeam}>Leave team</button>
             {:else}
-    <button class="text-xl mt-4 font-bold btn btn-ghost text-secondary" > <Hammer /> your team was banned by an admin</button>
+    <button class="text-xl mt-4 font-bold btn btn-ghost text-secondary" > <Hammer /> Your team was banned by an admin</button>
             {/if}
             </center>
 

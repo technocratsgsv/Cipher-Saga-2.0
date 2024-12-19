@@ -72,33 +72,33 @@
         });
         switch (r.status) {
             case 200:
-                sendSuccessToast("team joined","you're all set!")
+                sendSuccessToast("Team joined","You're all set!")
                 accState = AccountState.DONE;
                 // await invalidateAll();
                 break;
 
             case 404:
-                sendSuccessToast("team Not Found","please check the code and try again.")
+                sendSuccessToast("Team not found","Please check the code and try again.")
                 console.log("team not found");
                 break;
 
             case 419:
-                sendErrorToast("team Full","please try another team.")
+                sendErrorToast("Team full","Please try another team.")
                 console.log("team is full");
                 break;
 
             case 418:
-                sendErrorToast("already in this team","you're already in this team.")
+                sendErrorToast("Already in this team","You're already in this team.")
                 console.log("already in this team");
                 break;
 
             case 403:
-                sendErrorToast("already in a team","leave that team first.")
+                sendErrorToast("Already in a team","Leave that team first.")
                 console.log("already in a team");
                 break;
 
             default:
-                sendErrorToast("something went wrong","please try again later.")
+                sendErrorToast("Something went wrong","Please try again later.")
                 console.log("something went wrong");
                 break;
         }
@@ -119,19 +119,19 @@
         switch (r.status) {
             case 200:
                 console.log("created");
-                sendSuccessToast("team Created","you're all set!")
+                sendSuccessToast("Team created","You're all set!")
                 await invalidateAll();
                 break;
             case 429:
-                sendErrorToast("team name taken","please try a different one");
+                sendErrorToast("Team name taken","Please try a different one.");
                 console.log("team Name is already taken");
                 break;
             case 400:
-                sendErrorToast("invalid request","please check your inputs.");
+                sendErrorToast("Invalid request","Please check your inputs.");
                 console.log("invalid request")
                 break;
             default:
-                sendErrorToast("something went wrong","please try again later");
+                sendErrorToast("Something went wrong","Please try again later.");
                 console.log("Something went wrong")
 
         }
@@ -157,7 +157,7 @@
                 // alert("Username already exists. Please try another one.")
                 sendErrorToast("username taken","please try a different one");
             } else {
-                sendSuccessToast("account Created","")
+                sendSuccessToast("Account created","")
                 await invalidateAll();
             }
         }
@@ -197,7 +197,7 @@
 <!--    </ul>-->
 <!--</div>-->
 <h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-7xl font-medium tracking-tight text-transparent">
-    get ready to rumble
+    Gear up hunters!
 </h2>
 
 <center>
@@ -207,8 +207,8 @@
 
 {#if accState === AccountState.GOOGLE_SIGN_IN}
    <center>
-       <h2 class="font-sans text-4xl mt-4 mb-2">create your account</h2>
-       <p class="font-medium mb-4">use your <b>IITM Email ID</b>. <br/>if you don't have one, you can still play but you won't be considered for the prizes.</p>
+       <h2 class="font-sans text-4xl mt-4 mb-2">Create your account</h2>
+       <p class="font-medium mb-4">Use your <b>IITM Email ID</b>. <br/>If you don't have one, you can still play but you won't be considered for the prizes.</p>
        <button
                class=" group/btn relative flex h-10 items-center justify-start space-x-2 rounded-md  px-4 font-medium text-black shadow-input bg-zinc-900 shadow-[0px_0px_1px_1px_var(--neutral-800)] w-[50%]" style="z-index: 1;"
                disabled={isAuthLoading}
@@ -230,16 +230,16 @@
           <div class="w-[50%]">
               <div class="mb-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
                   <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;" >
-                      <Label htmlFor="firstname">first name</Label>
-                      <Input id="firstname" placeholder="gavin" type="text" onInput={(e)=>{
-                            firstname = e.target.value.replace(/[^a-zA-Z ]/g, '');
+                      <Label htmlFor="firstname">First name</Label>
+                      <Input id="firstname" placeholder="Krishaay" type="text" onInput={(e)=>{
+                            firstname = e.target.value.replace(/[^a-zA-Z]/g, '');
                             e.target.value = firstname;
                       }}/>
                   </div>
                   <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;">
-                      <Label htmlFor="lastname">last name</Label>
-                      <Input id="lastname" placeholder="belson" type="text" onInput={(e)=>{
-                            lastname = e.target.value.replace(/[^a-zA-Z ]/g, '');
+                      <Label htmlFor="lastname">Last name</Label>
+                      <Input id="lastname" placeholder="Jois" type="text" onInput={(e)=>{
+                            lastname = e.target.value.replace(/[^a-zA-Z]/g, '');
                             e.target.value = lastname;
                       }}/>
                   </div>
@@ -247,8 +247,8 @@
               </div>
               <div class="mb-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
                   <div class={'mb-4 flex w-full flex-col space-y-2'} style="z-index: 1;">
-                      <Label htmlFor="email">username</Label>
-                      <Input id="email" placeholder="gavinbelson" type="text" onInput={(e)=>{
+                      <Label htmlFor="email">Username</Label>
+                      <Input id="email" placeholder="PattaGobhi" type="text" onInput={(e)=>{
                           username = e.target.value.replace(/[^a-zA-Z0-9]/g, '');
                             e.target.value = username;
                       }} />
@@ -259,7 +259,7 @@
                       disabled={loading}
                       on:click={updateNameUsername}
               >
-                  next &rarr;
+                  Next &rarr;
                   <span
                           class="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100"
                   />
@@ -275,14 +275,14 @@
 {/if}
 {#if accState === AccountState.TEAM_SELECT}
     <center>
-    <h2 class="font-sans text-4xl mt-4 mb-2">team selection</h2>
-    <p class="font-medium mb-4">if you would like to play solo, create a team and don't add anyone to it.</p>
+    <h2 class="font-sans text-4xl mt-4 mb-2">Team selection</h2>
+    <p class="font-medium mb-4">If you would like to play solo, create a team and don't add anyone to it.</p>
     <button class="relative btn btn-accent btn-wide z-20" on:click={()=>document.getElementById('create_team_modal').showModal()}>
-        create team
+        Create team
     </button>
 
         <button class="relative btn btn-secondary btn-wide z-20" on:click={()=>document.getElementById('join_team_modal').showModal()}>
-            join team
+            Join team
         </button>
 
 
@@ -294,8 +294,8 @@
     <center>
         <h2 class="font-sans text-4xl mt-4 mb-4">you're all set</h2>
         <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240515T183000Z%2F20240515T184500Z&details=&location=&text=encryptid%20finale%20kickoff")}>add kickoff to calendar</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/YaMxYCpf3V")}>join discord</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>view team</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/YaMxYCpf3V")}>Join Discord</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>View team</button>
 
     </center>
     {/if}
@@ -308,11 +308,11 @@
         <form method="dialog">
             <button disabled={loading} class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
-        <h3 class="font-bold text-3xl text-accent mb-4">new team</h3>
+        <h3 class="font-bold text-3xl text-accent mb-4">New team</h3>
         <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;">
-            <Label htmlFor="teamname">team name</Label>
-            <Input id="teamname" placeholder="hooli" type="text" onInput={(e)=>{
-                            teamname = e.target.value.replace(/[^a-z0-9 ]/g, '');
+            <Label htmlFor="teamname">Team name</Label>
+            <Input id="teamname" placeholder="Cipher Saga Monarchs" type="text" onInput={(e)=>{
+                            teamname = e.target.value.replace(/[^a-zA-Z0-9 ]/g, '');
                             e.target.value = teamname;
                       }}/>
         </div>
@@ -330,7 +330,7 @@
         </form>
         <h3 class="font-bold text-3xl text-secondary mb-4">join team</h3>
         <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;">
-            <Label htmlFor="teamcode">team code</Label>
+            <Label htmlFor="teamcode">Team code</Label>
             <Input id="teamcode" placeholder="abc1234" type="text" onInput={(e)=>{
                             // 8 char limit
                             teamcode = e.target.value.replace(/[^a-zA-Z0-9]/g, '').substring(0,8);
