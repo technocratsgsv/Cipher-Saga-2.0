@@ -1,8 +1,4 @@
-<center>
-<img src="docs/icon.png" height="200">
-</center>
-
-# EncryptID Finale Platform
+# CryptIQ
 This platform was used the for the 3rd & Final Edition of EncryptID, an online cryptic hunt based on anime, pop culture and more hosted by the COSMOS Tech Society of IIT Madras.
 
 <img src="docs/landing.jpeg">
