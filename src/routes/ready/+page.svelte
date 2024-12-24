@@ -173,7 +173,7 @@
     }
 
 </script>
-
+<title>CryptIQ - Ready</title>
 <!--
 <BackgroundBeams/>-->
 <!--{#if data.userID === null}-->

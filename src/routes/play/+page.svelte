@@ -76,7 +76,7 @@
     $: currQuestionData, updateComment();
     $: updateQuestionVisibility();
 </script>
-
+<title>CryptIQ - Play</title>
 {#if questionsVisible}
     <Doc ref={`/teams/${data.locals.userTeam}`} let:data={teamData}>
         <p slot="loading" class="loading"></p>

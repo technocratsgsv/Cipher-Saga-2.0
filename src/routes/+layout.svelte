@@ -12,7 +12,6 @@
     <ToastContainer let:data={data}>
         <BootstrapToast {data} />
 </ToastContainer>
-
 {#if ["/","/leaderboard","/team"].includes($page.url.pathname)}
 <div class="navbar">
     <a class="btn btn-ghost text-md" class:text-primary={$page.url.pathname==="/"} href="/"><ArrowUpRight/> Home</a>

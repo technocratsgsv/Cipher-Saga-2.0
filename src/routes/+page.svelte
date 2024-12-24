@@ -5,6 +5,7 @@
     let showRules = false;
 </script>
 
+<title>CryptIQ - Home</title>
 {#if !showRules}
     <div
         class="relative flex h-screen w-full flex-col items-center justify-center rounded-md px-32 antialiased"

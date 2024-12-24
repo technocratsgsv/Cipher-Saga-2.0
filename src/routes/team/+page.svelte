@@ -28,6 +28,7 @@
         loading = false;
     }
 </script>
+<title>CryptIQ - Your Team</title>
 
 <h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-3xl font-medium tracking-tight text-transparent">
     Your team
