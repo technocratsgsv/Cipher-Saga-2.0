@@ -10,9 +10,9 @@ export default {
   daisyui: {
     themes: [{
       sunset: {
-        ...require("daisyui/src/theming/themes")["sunset"],
+        ...require("daisyui/src/theming/themes")["night"],
         "base-100": "#000000",
-        "primary": "#0CA5E9"
+        "primary": "#FC274F"
       }
     }],
   }

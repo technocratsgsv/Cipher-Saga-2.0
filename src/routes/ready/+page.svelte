@@ -174,7 +174,8 @@
 
 </script>
 
-
+<!--
+<BackgroundBeams/>-->
 <!--{#if data.userID === null}-->
 <!--    <LoginButton-->
 <!--            provider="google"-->
@@ -196,6 +197,7 @@
 <!--        <li class="step" class:step-success={accState === AccountState.DONE} />-->
 <!--    </ul>-->
 <!--</div>-->
+
 <h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-7xl font-medium tracking-tight text-transparent">
     Gear up hunters!
 </h2>
@@ -215,7 +217,7 @@
                on:click={signInWithGoogle}
        >
            <IconBrandGoogle class="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-           <span class="text-sm text-neutral-700 dark:text-neutral-300"> sign in with google </span>
+           <span class="text-sm text-neutral-700 dark:text-neutral-300"> Sign in with google </span>
            <span
                    class="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100"
            />
@@ -292,14 +294,14 @@
 {/if}
 {#if accState === AccountState.DONE}
     <center>
-        <h2 class="font-sans text-4xl mt-4 mb-4">you're all set</h2>
-        <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240515T183000Z%2F20240515T184500Z&details=&location=&text=encryptid%20finale%20kickoff")}>add kickoff to calendar</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/YaMxYCpf3V")}>Join Discord</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>View team</button>
-
+        <h2 class="font-sans text-4xl mt-4 mb-4">You're all set</h2>
+        <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250103T170000Z%2F20250107T050000Z&details=&location=&text=CryptIQ%20Begins")}>Add to calendar</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/38FYHdmYx3")}>Join Discord</button>
+        <!--<button class="relative z-20 mt-4 btn btn-wide btn-info" on:click={async ()=>await open("https://github.com/Soham-Wani/CryptIQ")}>View repository</button>-->
+        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>View team</button><br>
+        <button class="z-20 mt-4 btn btn-wide btn-gray" on:click={signoutSSR}>Log out</button>
     </center>
     {/if}
-<BackgroundBeams/>
 
 <!-- You can open the modal using ID.showModal() method -->
 <!--<button class="btn" onclick="my_modal_3.showModal()">open modal</button>-->
@@ -319,7 +321,7 @@
         <button  class="btn btn-accent btn-wide mt-4" on:click={async ()=>{
             await createTeam();
             document.getElementById('create_team_modal').close();
-        }} disabled={loading}>{#if loading}<span class="loading loading-ring loading-lg text-accent"></span>{:else}create{/if}</button>
+        }} disabled={loading}>{#if loading}<span class="loading loading-ring loading-lg text-accent"></span>{:else}Create{/if}</button>
     </div>
 </dialog>
 
@@ -343,7 +345,3 @@
         }} disabled={loading}>{#if loading}<span class="loading loading-ring loading-lg text-secondary"></span>{:else}join{/if}</button>
     </div>
 </dialog>
-
-<!--<button class="btn relative" on:click={signoutSSR}>-->
-<!--    log out-->
-<!--</button>-->

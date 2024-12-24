@@ -8,6 +8,7 @@
         CrossIcon,
         List,
         Lock,
+        ArrowUpRight,
     } from "lucide-svelte";
     import { Doc } from "sveltefire";
     import Coin from "@tabler/icons-svelte/IconCoin.svelte";
@@ -16,25 +17,27 @@
     import { sendErrorToast, sendSuccessToast } from "@/toast_utils";
     import { onMount } from "svelte";
     import { browser } from "$app/environment";
+    import { page } from "$app/stores";
 
     let loading = false;
     let answer = "";
-    let questionsVisible = false; // Controls question visibility
+    let questionsVisible = false;
 
     export let data;
     let questions = data.questions;
-    let isAdmin = data.isAdmin; // Admin status is passed from server side
+    let isAdmin = data.isAdmin;
 
     let currQuestion = 0;
     $: currQuestionData = questions[currQuestion];
 
-    let startTime: Date | null = new Date(data.startTime); // Start date-time passed from the server
-    let endTime: Date | null = new Date(data.endTime); // End date-time passed from the server
+    let startTime: Date | null = new Date(data.startTime);
+    let endTime: Date | null = new Date(data.endTime);
 
     const updateQuestionVisibility = () => {
         const now = new Date();
         questionsVisible =
-            (startTime && endTime && now >= startTime && now <= endTime) || isAdmin;
+            (startTime && endTime && now >= startTime && now <= endTime) ||
+            isAdmin;
     };
 
     const submitAnswer = async () => {
@@ -64,7 +67,7 @@
     const updateComment = () => {
         if (currQuestionData === null || currQuestionData === undefined) return;
         if (browser) {
-            const e = document.getElementById(";)"); // Ensure this ID exists in your DOM
+            const e = document.getElementById(";)");
             e.innerHTML = "";
             e.appendChild(document.createComment(currQuestionData.comment));
         }
@@ -78,6 +81,11 @@
     <Doc ref={`/teams/${data.locals.userTeam}`} let:data={teamData}>
         <p slot="loading" class="loading"></p>
         <div class="navbar">
+            <a
+                class="btn btn-ghost text-md"
+                class:text-primary={$page.url.pathname === "/"}
+                href="/"><ArrowUpRight /> Home</a
+            >
             <button
                 class="btn btn-square"
                 disabled={currQuestion === 0}
@@ -89,7 +97,7 @@
             </button>
             <a
                 class="btn btn-ghost text-xl"
-                class:text-success={(teamData.completed_levels || []).includes(
+                class:text-primary={(teamData.completed_levels || []).includes(
                     currQuestionData.uid,
                 )}
             >
@@ -111,16 +119,16 @@
                     <ArrowRight />
                 {/if}
             </button>
-            <button class="btn mr-4">
+            <button class="btn btn-ghost mr-4">
                 <Affiliate />
                 {teamData.teamName}
             </button>
-            <button class="btn mr-4">
+            <button class="btn btn-ghost mr-4">
                 <Coin />
                 {(teamData.level || 1) * 100 - 100}
             </button>
             <button
-                class="btn"
+                class="btn btn-ghost"
                 on:click={() =>
                     document.getElementById("logsModal").showModal()}
             >
@@ -160,7 +168,7 @@
                         placeholder="..."
                         type="text"
                         onInput={(e) => {
-                            answer = e.target.value.replace(" ", "");
+                            answer = e.target.value.replace(/[^a-z]/g, "");
                             e.target.value = answer;
                         }}
                     />
@@ -186,11 +194,7 @@
         </center>
     </Doc>
 {:else}
-    <center>
-        <p class="text-xl text-gray-500">
-            The questions will be visible during the specified time.
-        </p>
-    </center>
+    You cannot view this right now.
 {/if}
 
 <dialog id="logsModal" class="modal">

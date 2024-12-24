@@ -29,7 +29,7 @@
     }
 </script>
 
-<h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-4xl font-medium tracking-tight text-transparent">
+<h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-3xl font-medium tracking-tight text-transparent">
     Your team
 </h2>
 
@@ -37,10 +37,10 @@
 <Doc ref={`teams/${data.userTeam}`} let:data>
 
    <center>
-       <p class="text-primary text-7xl mb-4">{data.teamName}</p>
+       <p class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-6xl font-bold text-transparent pb-[1vh]">{data.teamName}</p>
        <Button
                borderRadius="0.75rem"
-               className="bg-white-300 text-white border-slate-800 text-lg font-medium"
+               className="bg-white-300 text-white border-slate-800 text-lg font-medium font-mono"
                onClick={()=>{
                    navigator.clipboard.writeText(data.code);
                    clicked = true;
@@ -59,11 +59,11 @@
        <!--    {/if}-->
    </center>
    <center>
-    <p class="text-lg mt-4 font-medium text-primary font-mono">LEVEL {data.level} • MEMBERS {data.members.length}/3</p>
+    <p class="text-lg mt-4 font-medium text-primary font-sans">Level {data.level} • Members {data.members.length}/3</p>
 
    </center>
     <center>
-        <div class=" mt-4 text-2xl text-secondary">Members</div>
+        <!--<div class=" mt-4 text-2xl text-secondary">Members</div>-->
         <!--{#each data.members as member}-->
         <!--    <div class="text-lg text-white">-->
         <!--        <Doc ref={`users/${member}`} let:data>-->
@@ -87,9 +87,9 @@
         </div>
 
         {#if !data.banned}
-        <button class="btn btn-wide mt-10 btn-outline btn-secondary" disabled={loading} on:click={leaveTeam}>Leave team</button>
+        <button class="btn btn-wide mt-10 btn-outline btn-primary" disabled={loading} on:click={leaveTeam}>Leave team</button>
             {:else}
-    <button class="text-xl mt-4 font-bold btn btn-ghost text-secondary" > <Hammer /> Your team was banned by an admin</button>
+    <button class="text-xl mt-4 font-bold btn btn-ghost text-primary" > <Hammer /> Your team was banned by an admin</button>
             {/if}
             </center>
 

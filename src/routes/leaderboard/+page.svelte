@@ -2,9 +2,9 @@
     export let data;
     let leaders = [];
     let rest = [];
-    if(data.leaderboard.length > 3){
-        leaders = data.leaderboard.slice(0,3);
-        rest = data.leaderboard.slice(3);
+    if(data.leaderboard.length > 2){
+        leaders = data.leaderboard.slice(0,2);
+        rest = data.leaderboard.slice(2);
     } else {
         leaders = data.leaderboard;
         rest = [];
@@ -38,7 +38,7 @@
     }
 </script>
 
-<h2 class="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-7xl font-medium tracking-tight text-transparent">
+<h2 class="mt-8 bg-gradient-to-br from-slate-300 to-primary bg-clip-text py-4 text-center text-7xl font-medium tracking-tight text-transparent">
     Leaderboard
 
 </h2>
@@ -76,7 +76,7 @@
             <tbody>
             {#each rest as team,teamIndex}
                 <tr class="text-xl">
-                    <th class="font-mono">#{teamIndex+4} </th>
+                    <th class="font-mono">#{teamIndex+3} </th>
                     <td class="font-bold">{team.teamName} {#if !team.iitm}<div class="badge badge-error badge-outline">Non-IIT</div>{/if}</td>
                     <td>{team.members}</td>
                     <td>{team.score}</td>
