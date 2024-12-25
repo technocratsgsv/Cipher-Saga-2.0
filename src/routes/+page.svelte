@@ -157,6 +157,17 @@
                             class="relative z-10 text-justify text-sm text-neutral-400 list-disc pl-5"
                         >
                             <li>
+                                Make sure you have registered on the platform
+                                using only your registered student email. If you
+                                don't have one, you can still play but you won't
+                                be considered for the prizes. Make sure you are
+                                part of atleast one team.
+                            </li>
+                            <li>
+                                Make sure you have joined the Discord server as
+                                well.
+                            </li>
+                            <li>
                                 Asking other players for hints or sharing
                                 answers or hints among users via any medium is
                                 strictly prohibited. If found, it will lead to
@@ -193,13 +204,6 @@
                         <ul
                             class="relative z-10 text-justify text-sm text-neutral-400 list-disc pl-5"
                         >
-                            <li>
-                                Make sure you have registered on the platform
-                                using only your registered student email. If you
-                                don't have one, you can still play but you won't
-                                be considered for the prizes. Make sure you are
-                                part of atleast one team.
-                            </li>
                             <li>
                                 To report misconduct by any player, DM any
                                 member of the team.
@@ -343,41 +347,47 @@
                     </div>
                     <div class="pb-[3vh]">
                         <div class="grid grid-cols-3 gap-4">
-                            <div class="flex flex-col items-center"><a href="">
-                                <h2
-                                    class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                            <div class="flex flex-col items-center">
+                                <a href="">
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                    >
+                                        Soham Wani
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Event Head)
+                                    </p></a
                                 >
-                                    Soham Wani
-                                </h2>
-                                <p
-                                    class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
-                                >
-                                    (Event Head)
-                                </p></a>
                             </div>
-                            <div class="flex flex-col items-center"><a href="">
-                                <h2
-                                    class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                            <div class="flex flex-col items-center">
+                                <a href="">
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                    >
+                                        Shreya Mohanty
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Deputy Head)
+                                    </p></a
                                 >
-                                    Shreya Mohanty
-                                </h2>
-                                <p
-                                    class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
-                                >
-                                    (Deputy Head)
-                                </p></a>
                             </div>
-                            <div class="flex flex-col items-center"><a href="">
-                                <h2
-                                    class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                            <div class="flex flex-col items-center">
+                                <a href="">
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                    >
+                                        Adrija Bose
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Volunteer)
+                                    </p></a
                                 >
-                                    Adrija Bose
-                                </h2>
-                                <p
-                                    class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
-                                >
-                                    (Volunteer)
-                                </p></a>
                             </div>
                         </div>
                     </div>
