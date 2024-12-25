@@ -78,7 +78,7 @@
                 break;
 
             case 404:
-                sendSuccessToast("Team not found","Please check the code and try again.")
+                sendErrorToast("Team not found","Please check the code and try again.")
                 console.log("team not found");
                 break;
 
@@ -99,7 +99,7 @@
 
             default:
                 sendErrorToast("Something went wrong","Please try again later.")
-                console.log("something went wrong");
+                console.log(r, "something went wrong");
                 break;
         }
         loading = false;
@@ -330,7 +330,7 @@
         <form method="dialog">
             <button disabled={loading} class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
-        <h3 class="font-bold text-3xl text-secondary mb-4">join team</h3>
+        <h3 class="font-bold text-3xl text-secondary mb-4">Join team</h3>
         <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;">
             <Label htmlFor="teamcode">Team code</Label>
             <Input id="teamcode" placeholder="abc1234" type="text" onInput={(e)=>{
