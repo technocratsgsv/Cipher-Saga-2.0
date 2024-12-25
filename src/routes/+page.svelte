@@ -101,7 +101,7 @@
                             Participants will team up to tackle a series of
                             challenging levels, deciphering clues and solving
                             riddles to progress. The event will test their wit,
-                            collaboration, and problem-solving skills, whihc
+                            collaboration, and problem-solving skills, which
                             will probably leave everyone thrilled and eager for
                             more.
                         </p>
@@ -164,8 +164,10 @@
                                 part of atleast one team.
                             </li>
                             <li>
-                                Make sure you have joined the Discord server as
-                                well.
+                                Make sure you have joined the <a
+                                    href="https://discord.gg/38FYHdmYx3"
+                                    >Discord server</a
+                                > as well.
                             </li>
                             <li>
                                 Asking other players for hints or sharing
@@ -228,7 +230,7 @@
                                 default and this number is subject to change. Be
                                 updated on Discord. Unused leads don't stack.
                                 Unanswered leads can be changed. Confusing leads
-                                will be not considered.
+                                will not be considered.
                             </li>
                             <li>
                                 And if it was not obvious, answer sharing, leads
