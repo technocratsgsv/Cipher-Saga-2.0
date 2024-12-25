@@ -24,7 +24,7 @@
     <MovingBorder {duration} rx="30%" ry="30%">
     <div
         class={cn(
-        'h-20 w-20 bg-[radial-gradient(#722F37_40%,transparent_60%)] opacity-[0.8]',
+        'h-20 w-20 bg-[radial-gradient(#a10093_40%,transparent_60%)] opacity-[0.8]',
         borderClassName
     )}
     />
