@@ -13,7 +13,7 @@
         <BootstrapToast {data} />
 </ToastContainer>
 {#if ["/","/leaderboard","/team"].includes($page.url.pathname)}
-<div class="navbar flex flex-wrap justify-between items-center p-4 bg-base-100">
+<div class="navbar">
     <a class="btn btn-ghost text-md" class:text-primary={$page.url.pathname==="/"} href="/"><ArrowUpRight/> Home</a>
     <a class="btn btn-ghost text-md" class:text-primary={$page.url.pathname==="/leaderboard"} href="/leaderboard"><ArrowUpRight/> Leaderboard</a>
     {#if ![undefined,null].includes(data.userTeam)}<a class="btn btn-ghost text-md" class:text-primary={$page.url.pathname==="/team"} href="/team"><ArrowUpRight/> Team</a>{/if}
