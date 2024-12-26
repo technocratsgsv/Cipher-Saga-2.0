@@ -348,7 +348,7 @@
                         </p>
                     </div>
                     <div class="pb-[3vh]">
-                        <div class="grid grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
                                 <a href="">
                                     <h2
