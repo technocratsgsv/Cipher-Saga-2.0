@@ -89,7 +89,7 @@
                 >
                     <div class="pb-[3vh]">
                         <h2
-                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent pb-[1vh]"
+                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans font-bold text-transparent text-4xl md:text-6xl lg:text-7xl"
                         >
                             What is CryptIQ?
                         </h2>
