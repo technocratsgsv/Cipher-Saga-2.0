@@ -11,7 +11,7 @@
         class="relative flex h-screen w-full flex-col items-center justify-center rounded-md px-32 antialiased"
     >
         <BackgroundBeams />
-        <div class="mx-auto max-w-2xl p-4">
+        <div class="px-8 md:px-16 lg:px-32">
             <Countdown
                 from="2025-01-03 17:00:00"
                 dateFormat="YYYY-MM-DD H:m:s"
