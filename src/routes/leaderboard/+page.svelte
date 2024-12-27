@@ -2,9 +2,9 @@
     export let data;
     let leaders = [];
     let rest = [];
-    if(data.leaderboard.length > 2){
-        leaders = data.leaderboard.slice(0,2);
-        rest = data.leaderboard.slice(2);
+    if(data.leaderboard.length > 3){
+        leaders = data.leaderboard.slice(0,3);
+        rest = data.leaderboard.slice(3);
     } else {
         leaders = data.leaderboard;
         rest = [];
