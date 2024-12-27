@@ -43,7 +43,7 @@
 
 </h2>
 <center>
-    <div class="flex">
+    <div class="flex flex-wrap justify-center gap-4 md:gap-8">
         {#each leaders as team,teamPosition}
 
 
@@ -62,8 +62,8 @@
     </div>
 </center>
 <center>
-    <div class="w-[75%]">
-        <table class="table">
+    <div class="w-full max-w-[90%] md:w-[75%] overflow-x-auto">
+        <table class="table w-full">
             <!-- head -->
             <thead>
             <tr>
@@ -75,7 +75,7 @@
             </thead>
             <tbody>
             {#each rest as team,teamIndex}
-                <tr class="text-xl">
+                <tr class="text-sm md:text-xl">
                     <th class="font-mono">#{teamIndex+3} </th>
                     <td class="font-bold">{team.teamName} {#if !team.iitm}<div class="badge badge-error badge-outline">Non-IIT</div>{/if}</td>
                     <td>{team.members}</td>
