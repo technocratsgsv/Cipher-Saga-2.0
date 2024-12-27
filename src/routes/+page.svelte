@@ -137,9 +137,7 @@
                             class="relative z-10 text-justify text-sm text-neutral-400"
                         >
                             Winners will be decided based on the leaderboard
-                            standings at the end of the competition. The two
-                            teams at the top of the leaderboard will be declared
-                            the winners. The leaderboard ranks teams based on
+                            standings at the end of the competition. The leaderboard ranks teams based on
                             how quickly they solve the puzzles, with teams that
                             solve earlier being placed higher. Accuracy is not a
                             criteria.
