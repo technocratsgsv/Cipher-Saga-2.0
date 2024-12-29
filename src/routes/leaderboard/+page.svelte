@@ -43,7 +43,7 @@
 
 </h2>
 <center>
-    <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+    <div class="flex flex-wrap justify-center gap-[6.25vw]">
         {#each leaders as team,teamPosition}
 
 
