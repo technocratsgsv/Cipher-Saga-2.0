@@ -233,14 +233,14 @@
               <div class="mb-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
                   <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;" >
                       <Label htmlFor="firstname">First name</Label>
-                      <Input id="firstname" placeholder="Krishaay" type="text" onInput={(e)=>{
+                      <Input id="firstname" placeholder="First name" type="text" onInput={(e)=>{
                             firstname = e.target.value.replace(/[^a-zA-Z]/g, '');
                             e.target.value = firstname;
                       }}/>
                   </div>
                   <div class={'flex w-full flex-col space-y-2'} style="z-index: 1;">
                       <Label htmlFor="lastname">Last name</Label>
-                      <Input id="lastname" placeholder="Jois" type="text" onInput={(e)=>{
+                      <Input id="lastname" placeholder="Last name" type="text" onInput={(e)=>{
                             lastname = e.target.value.replace(/[^a-zA-Z]/g, '');
                             e.target.value = lastname;
                       }}/>
