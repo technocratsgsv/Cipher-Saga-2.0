@@ -21,24 +21,11 @@
 
     let loading = false;
     let answer = "";
-    let questionsVisible = false;
 
     export let data;
     let questions = data.questions;
-    let isAdmin = data.isAdmin;
-
     let currQuestion = 0;
     $: currQuestionData = questions[currQuestion];
-
-    let startTime: Date | null = new Date(data.startTime);
-    let endTime: Date | null = new Date(data.endTime);
-
-    const updateQuestionVisibility = () => {
-        const now = new Date();
-        questionsVisible =
-            (startTime && endTime && now >= startTime && now <= endTime) ||
-            isAdmin;
-    };
 
     const submitAnswer = async () => {
         loading = true;
@@ -74,10 +61,9 @@
     };
 
     $: currQuestionData, updateComment();
-    $: updateQuestionVisibility();
 </script>
 <title>CryptIQ - Play</title>
-{#if questionsVisible}
+{#if questions.length > 0}
     <Doc ref={`/teams/${data.locals.userTeam}`} let:data={teamData}>
         <p slot="loading" class="loading"></p>
         <div class="navbar">
