@@ -6,7 +6,7 @@ service cloud.firestore {
       allow read: if false;
     }
     match /users/{document}{
-      allow read: if request.auth.uid != null;
+      allow read: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.team == get(/databases/$(database)/documents/users/$(document)).data.team;
     }
     match /teams/{document}{
       allow get: if request.auth.uid != null;
@@ -18,7 +18,6 @@ service cloud.firestore {
       allow read: if true;
     }
     match /logs/{team}{
-      //      allow read,write: if false;
       allow read: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.team == (team);
     }
 
