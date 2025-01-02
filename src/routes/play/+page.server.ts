@@ -3,10 +3,10 @@ import { adminDB } from '@/server/admin';
 
 const collectionReff = adminDB.collection('/levels').orderBy('level');
 
-let questions = [];
 let loaded = false;
 
 export const load = async ({ locals }) => {
+  let questions = [];
   const userDoc = await adminDB.collection('/users').doc(locals.userID).get();
   const teamId = userDoc.data().team;
   const team = await adminDB.collection('/teams').doc(teamId).get();
