@@ -12,6 +12,7 @@ export const load = async ({ locals }) => {
   const team = await adminDB.collection('/teams').doc(teamId).get();
   const level = team.data().level;
   var collectionRef;
+  console.log(userDoc + "\n\n" + teamId + "\n\n" + team + "\n\n" + level);
 
   let isAdmin = false;
   try {
@@ -31,11 +32,15 @@ export const load = async ({ locals }) => {
     collectionRef = collectionReff;
   }
 
+  console.log(isAdmin + "\n\n" + collectionReff + "\n\n" + collectionRef);
+
   const now = new Date();
   const startTime = new Date("2025-01-03T11:30:00Z");
   const endTime = new Date("2025-01-06T23:30:00Z");
 
   const questionsVisible = now >= startTime && now <= endTime;
+
+  console.log(now + "\n\n" + startTime + "\n\n" + endTime + "\n\n" + questionsVisible);
 
   if (isAdmin || questionsVisible) {
 
