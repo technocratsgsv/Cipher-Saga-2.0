@@ -12,6 +12,7 @@ export const load = async ({ locals }) => {
     const teamId = userDoc.data().team;
     const team = await adminDB.collection('/teams').doc(teamId).get();
     const level = team.data().level;
+    console.log(level);
     var collectionRef;
 
     let isAdmin = false;
