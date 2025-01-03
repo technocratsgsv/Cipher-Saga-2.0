@@ -56,6 +56,6 @@ export const load = async ({ locals }) => {
 
   return {
     locals,
-    questions,
+    questions : questions.slice(0,level),
   };
 };
