@@ -72,8 +72,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         const logRef = adminDB.collection("logs").doc(locals.userTeam!);
         if (answer === actualAnswer) {
             let next_level = teamData.level;
-            if (teamData.iitm_verified) next_level++;
-            else console.log("not iitm verified");
+            if (teamData.iitm_verified || !teamData.iitm_verified) next_level++;
             await transaction.update(teamRef, {
                 "completed_levels": FieldValue.arrayUnion(questionId),
                 "level": next_level,
