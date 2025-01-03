@@ -11,7 +11,6 @@ export const load = async ({ locals }) => {
   const teamId = userDoc.data().team;
   const team = await adminDB.collection('/teams').doc(teamId).get();
   const level = team.data().level;
-  var collectionRef;
 
   const now = new Date();
   const startTime = new Date("2025-01-02T11:30:00Z");
