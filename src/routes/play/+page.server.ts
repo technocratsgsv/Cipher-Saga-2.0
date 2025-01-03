@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import { adminDB } from '@/server/admin';
 
-const collectionReff = adminDB.collection('/levels').orderBy('level');
+const collectionRef = adminDB.collection('/levels').orderBy('level');
 
 let loaded = false;
 let questions = [];
