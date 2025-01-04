@@ -77,7 +77,7 @@
             {#each rest as team,teamIndex}
                 <tr class="text-sm md:text-xl">
                     <th class="font-mono">#{teamIndex+4} </th>
-                    <td class="font-bold break-words max-w-[150px] whitespace-normal">{team.teamName} {#if !team.iitm}<div class="badge badge-error badge-outline">Non-IIT</div>{/if}</td>
+                    <td class="font-bold break-words max-w-[150px] whitespace-normal">{team.teamName} {#if !team.iitm}<div class="badge badge-error badge-outline">Non-IIT</div>{/if} {#if team.teamName == "Organizers"}<div class="badge badge-success badge-outline">Boss</div>{/if}</td>
                     <td>{team.members}</td>
                     <td>{team.score}</td>
                 </tr>
