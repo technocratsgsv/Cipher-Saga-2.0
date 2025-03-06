@@ -5,7 +5,7 @@
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "iitm_verified",
+          "fieldPath": "gsv_verified",
           "order": "ASCENDING"
         },
         {
@@ -23,7 +23,7 @@
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "iitm_verified",
+          "fieldPath": "gsv_verified",
           "order": "DESCENDING"
         },
         {
@@ -59,7 +59,7 @@
           "order": "DESCENDING"
         },
         {
-          "fieldPath": "iitm_verified",
+          "fieldPath": "gsv_verified",
           "order": "ASCENDING"
         }
       ]

@@ -1,6 +1,6 @@
 import type { RequestHandler } from '../$types';
-import { adminDB,adminAuth } from '$lib/server/admin';
-import {FieldValue} from 'firebase-admin/firestore';
+import { adminDB, adminAuth } from '$lib/server/admin';
+import { FieldValue } from 'firebase-admin/firestore';
 import * as referralCodes from 'referral-codes';
 import { error, json } from '@sveltejs/kit';
 import axios from "axios";
@@ -10,30 +10,53 @@ const indexRef = adminDB.collection("index").doc('nameIndex');
 const userIndexRef = adminDB.collection("index").doc("userIndex");
 let indexData = false;
 
-export const POST: RequestHandler = async ({ request ,cookies,locals}) => {
-    if(!indexData){
+export const POST: RequestHandler = async ({ request, cookies, locals }) => {
+    if (!indexData) {
         const data = (await indexRef.get()).data();
-        data.teamnames.forEach((e)=>existingTeamNames.add(e));
+        data.teamnames.forEach((e) => existingTeamNames.add(e));
         existingTeamCodes = data.teamcodes;
 
-                }
-    if(locals.userID === null || !locals.userExists || locals.userTeam !== null ){
+    }
+
+    if (locals.userID === null || !locals.userExists || locals.userTeam !== null) {
         return error(401, 'Unauthorized');
     }
+
+    const userDoc = await adminDB.collection('/users').doc(locals.userID).get();
+    const teamId = userDoc.data().team;
+    const team = await adminDB.collection('/teams').doc(teamId).get();
+    const level = team.data().level;
+    let isAdmin = false;
+    try {
+        if (userDoc.exists) {
+            const userData = userDoc.data();
+            isAdmin = userData?.role === 'admin';
+        } else {
+            console.error('User not found in database');
+        }
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+    }
+    const now = new Date();
+    const startTime = new Date("2025-01-03T11:30:00Z");
+    const endTime = new Date("2026-01-07T00:00:00Z");
+    const questionsVisible = now >= startTime && now <= endTime;
+    if (!isAdmin && !questionsVisible) return error(405, "Method Not Allowed");
+
     const body = await request.json();
-    let {teamName} = body;
-    if(teamName === undefined || teamName === null || teamName.trim() === "") return error(400,"Bad Request");
+    let { teamName } = body;
+    if (teamName === undefined || teamName === null || teamName.trim() === "") return error(400, "Bad Request");
     teamName = teamName.toLowerCase();
-    if(existingTeamNames.has(teamName)) return error(429,"Team name is already taken");
+    if (existingTeamNames.has(teamName)) return error(429, "Team name is already taken");
     await adminDB.runTransaction(async (transaction) => {
-        const newTeamRef =  adminDB.collection('teams').doc();
-        const userRef =  adminDB.collection('users').doc(locals.userID!);
+        const newTeamRef = adminDB.collection('teams').doc();
+        const userRef = adminDB.collection('users').doc(locals.userID!);
         const teamID = newTeamRef.id;
         let teamCode = referralCodes.generate({
             length: 8,
             count: 1
         })[0].toLowerCase();
-        while(existingTeamCodes[teamCode] !== undefined){
+        while (existingTeamCodes[teamCode] !== undefined) {
             teamCode = referralCodes.generate({
                 length: 8,
                 count: 1,
@@ -52,46 +75,46 @@ export const POST: RequestHandler = async ({ request ,cookies,locals}) => {
             members: teamMembers,
             level: 1,
             banned: false,
-            iitm_verified: false
+            gsv_verified: false
         };
-        if((userRecord.email || "").endsWith("iitm.ac.in")){
-            data['iitm_verified'] = true;
+        if ((userRecord.email || "").endsWith("gsv.ac.in")) {
+            data['gsv_verified'] = true;
         }
-        await transaction.set(newTeamRef,data);
+        await transaction.set(newTeamRef, data);
         let data2 = {
             team: teamID
         };
-         await transaction.update(userRef,data2);
-        const teamCodeKey = 'teamcodes.'+teamCode;
-        const teamCountKey = 'teamcounts.'+teamCode;
+        await transaction.update(userRef, data2);
+        const teamCodeKey = 'teamcodes.' + teamCode;
+        const teamCountKey = 'teamcounts.' + teamCode;
         let data3 = {
             teamnames: FieldValue.arrayUnion(teamName)
         };
         data3[teamCodeKey] = teamID;
         data3[teamCountKey] = [locals.userID,];
 
-        await transaction.update(indexRef,data3);
+        await transaction.update(indexRef, data3);
         let data4 = {};
         data4[locals.userID] = teamID
-        await transaction.update(userIndexRef,data4);
+        await transaction.update(userIndexRef, data4);
         existingTeamCodes[teamCode] = teamID;
         existingTeamNames.add(teamName);
         let teamcount = (await adminDB.collection('teams').count().get()).data().count;
-        try{
+        try {
             // await fetch(process.env.WEBHOOK || 'http://example.com',{
             //     method: "POST",
             //     body: JSON.stringify({
             //         "content": "**New Team**\nName: "+teamName+"\nTeam Count: "+teamcount
             //     })
             // });
-            if(process.env.WEBHOOK) await axios.post(process.env.WEBHOOK,{
-                "content": "**New Team**\nName: "+teamName+"\nTeam Count: "+teamcount
+            if (process.env.WEBHOOK) await axios.post(process.env.WEBHOOK, {
+                "content": "**New Team**\nName: " + teamName + "\nTeam Count: " + teamcount
             });
-        } catch (e){
+        } catch (e) {
             console.error(e);
         }
     });
-    return json({success: true});
+    return json({ success: true });
 
 
 };

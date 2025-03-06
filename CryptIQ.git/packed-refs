@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+80a1752faed3efa44dc62158ab54991d07cce51f refs/heads/dependabot/npm_and_yarn/fast-xml-parser-4.5.0
+8864d018a013758f33b32b8b7d72225ee7af08ba refs/heads/dependabot/npm_and_yarn/micromatch-4.0.8
+ba3fd335495803dd8c0a089888c0c834938ca55b refs/heads/dependabot/npm_and_yarn/multi-46f1d01b1a
+96778a61612fca5d7d3c63b888ab8e2f5583055b refs/heads/dependabot/npm_and_yarn/rollup-4.22.4
+040acd7a2f02c1068c192a4606be64498b047558 refs/heads/dependabot/npm_and_yarn/svelte-4.2.19
+f7073826f0d655b756e18ab711a167b1568b3282 refs/heads/dependabot/npm_and_yarn/vite-5.4.6
+a42c8e15b7802618d000e44e50d7e871e6cf1c7b refs/heads/dev
+97f12418567166d64ea19149c07fecf008f5b57a refs/heads/main
+5d4a2166c8be489f043ca4f6e062c29c8612ed89 refs/pull/1/head
+e15fc8c8773d59427e7a248f54bceffd32a7cccb refs/pull/2/head

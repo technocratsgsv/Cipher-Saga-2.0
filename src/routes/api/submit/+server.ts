@@ -72,7 +72,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         const logRef = adminDB.collection("logs").doc(locals.userTeam!);
         if (answer === actualAnswer) {
             let next_level = teamData.level;
-            if (teamData.iitm_verified || !teamData.iitm_verified) next_level++;
+            if (teamData.gsv_verified || !teamData.gsv_verified) next_level++;
             await transaction.update(teamRef, {
                 "completed_levels": FieldValue.arrayUnion(questionId),
                 "level": next_level,
@@ -81,7 +81,10 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             await transaction.set(logRef, {
                 count: FieldValue.increment(1),
                 logs: FieldValue.arrayUnion({
-                    "timestamp": Date.now(),
+                    "timestamp": new Date().toLocaleString("en-IN", {
+                        timeZone: "Asia/Kolkata",
+                        hour12: true
+                    }),
                     "questionId": questionId,
                     "type": "correct_answer",
                     "entered": answer,
@@ -96,7 +99,10 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             await transaction.set(logRef, {
                 count: FieldValue.increment(1),
                 logs: FieldValue.arrayUnion({
-                    "timestamp": Date.now(),
+                    "timestamp": new Date().toLocaleString("en-IN", {
+                        timeZone: "Asia/Kolkata",
+                        hour12: true
+                    }),
                     "questionId": questionId,
                     "type": "wrong_answer",
                     "entered": answer,
