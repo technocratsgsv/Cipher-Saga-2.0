@@ -173,7 +173,7 @@
     }
 
 </script>
-<title>CryptIQ - Ready</title>
+<title>Cipher Saga 2.0 - Ready</title>
 <!--
 <BackgroundBeams/>-->
 <!--{#if data.userID === null}-->
@@ -210,7 +210,7 @@
 {#if accState === AccountState.GOOGLE_SIGN_IN}
    <center>
        <h2 class="font-sans text-4xl mt-4 mb-2">Create your account</h2>
-       <p class="font-medium mb-4">Use your <b>IITM Email ID</b>. <br/>If you don't have one, you can still play but you won't be considered for the prizes.</p>
+       <p class="font-medium mb-4">Use your <b>GSV Email ID</b>. <br/>If you don't have one, you can still play but you won't be considered for the prizes.</p>
        <button
                class=" group/btn relative flex h-10 items-center justify-start space-x-2 rounded-md  px-4 font-medium text-black shadow-input bg-zinc-900 shadow-[0px_0px_1px_1px_var(--neutral-800)] w-[50%]" style="z-index: 1;"
                disabled={isAuthLoading}
@@ -250,7 +250,7 @@
               <div class="mb-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
                   <div class={'mb-4 flex w-full flex-col space-y-2'} style="z-index: 1;">
                       <Label htmlFor="email">Username</Label>
-                      <Input id="email" placeholder="PattaGobhi" type="text" onInput={(e)=>{
+                      <Input id="email" placeholder="Pseudonymous123" type="text" onInput={(e)=>{
                           username = e.target.value.replace(/[^a-zA-Z0-9]/g, '');
                             e.target.value = username;
                       }} />
@@ -295,8 +295,8 @@
 {#if accState === AccountState.DONE}
     <center>
         <h2 class="font-sans text-4xl mt-4 mb-4">You're all set</h2>
-        <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250103T170000Z%2F20250107T050000Z&details=&location=&text=CryptIQ%20Begins")}>Add to calendar</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/38FYHdmYx3")}>Join Discord</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250318T235900Z%2F20250318T235900Z&details=&location=&text=Cipher%20Saga%202.0%20Begins")}>Add to calendar</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/Dm5zy3EaE4")}>Join Discord</button>
         <!--<button class="relative z-20 mt-4 btn btn-wide btn-info" on:click={async ()=>await open("https://github.com/Soham-Wani/CryptIQ")}>View repository</button>-->
         <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>View team</button><br>
         <button class="z-20 mt-4 btn btn-wide btn-gray" on:click={signoutSSR}>Log out</button>

@@ -5,7 +5,7 @@
     let showRules = false;
 </script>
 
-<title>CryptIQ - Home</title>
+<title>Cipher Saga 2.0 - Home</title>
 {#if !showRules}
     <div
         class="relative flex h-screen w-full flex-col items-center justify-center rounded-md px-32 antialiased"
@@ -13,7 +13,7 @@
         <BackgroundBeams />
         <div class="px-8 md:px-16 lg:px-32">
             <Countdown
-                from="2025-01-03 17:00:00"
+                from="2025-03-18 23:59:00"
                 dateFormat="YYYY-MM-DD H:m:s"
                 zone="Asia/Kolkata"
                 let:remaining
@@ -26,7 +26,7 @@
                 </p>
             </Countdown>
             <h2 class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-transparent">
-                CryptIQ
+                Cipher Saga 2.0
             </h2>
             <p></p>
             <p
@@ -89,13 +89,13 @@
                         <h2
                             class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans font-bold text-transparent text-4xl md:text-6xl lg:text-7xl"
                         >
-                            What is CryptIQ?
+                            What is Cipher Saga 2.0?
                         </h2>
                         <p
                             class="relative z-10 text-justify text-sm text-neutral-400"
                         >
-                            CryptIQ is an online cryptic hunt event hosted
-                            during Paradox's Margazhi 2025 at IIT Madras.
+                            Cipher Saga 2.0 is an online cryptic hunt event hosted
+                            during EPITOME'25, the annual techno-management fest of Gati Shakti Vishwavidyalaya.
                             Participants will team up to tackle a series of
                             challenging levels, deciphering clues and solving
                             riddles to progress. The event will test their wit,
@@ -161,7 +161,7 @@
                             </li>
                             <li>
                                 Make sure you have joined the <a
-                                    href="https://discord.gg/38FYHdmYx3"
+                                    href="https://discord.gg/Dm5zy3EaE4"
                                     >Discord server</a
                                 > as well.
                             </li>
@@ -208,7 +208,7 @@
                             </li>
                             <li>
                                 All hints and lead confirmations will be done
-                                via the <a href="https://discord.gg/38FYHdmYx3"
+                                via the <a href="https://discord.gg/Dm5zy3EaE4"
                                     >official Discord server</a
                                 > only.
                             </li>
@@ -369,7 +369,7 @@
                                     <p
                                         class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
                                     >
-                                        (Deputy Head)
+                                        (Event Head)
                                     </p></a
                                 >
                             </div>
@@ -378,12 +378,42 @@
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
                                     >
-                                        Adrija Bose
+                                        Rishav Kumar
                                     </h2>
                                     <p
                                         class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
                                     >
                                         (Volunteer)
+                                    </p></a
+                                >
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+                            <div class="flex flex-col items-center">
+                                <a href="">
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                    >
+                                        Dr. Anshika Srivastav
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Faculty Advisor)
+                                    </p></a
+                                >
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <a href="">
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                    >
+                                        Dr. Sonu Lamba
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Faculty Advisor)
                                     </p></a
                                 >
                             </div>

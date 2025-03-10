@@ -25,8 +25,8 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             console.error('Error fetching user data:', error);
         }
         const now = new Date();
-        const startTime = new Date("2025-01-03T11:30:00Z");
-        const endTime = new Date("2026-01-07T00:00:00Z");
+        const startTime = new Date("2025-03-18T18:39:00Z");
+        const endTime = new Date("2025-03-22T18:39:00Z");
         const questionsVisible = now >= startTime && now <= endTime;
         if (!isAdmin && !questionsVisible) return error(405, "Method Not Allowed");
 

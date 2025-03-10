@@ -14,7 +14,7 @@ export const load
                     teamName: data.teamName,
                     score: (data.level-1) * 100,
                     members: data.members.length,
-                    iitm: data.gsv_verified
+                    gsv: data.gsv_verified
                 });
             });
             queryDef.onSnapshot((snap)=>{
@@ -25,7 +25,7 @@ export const load
                         teamName: data.teamName,
                         score: (data.level-1) * 100,
                         members: data.members.length,
-                        iitm: data.gsv_verified
+                        gsv: data.gsv_verified
                     });
                 });
                 leaderboard = newData;

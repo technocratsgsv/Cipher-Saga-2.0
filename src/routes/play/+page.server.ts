@@ -13,8 +13,8 @@ export const load = async ({ locals }) => {
   const level = team.data().level;
 
   const now = new Date();
-  const startTime = new Date("2025-01-03T11:30:00Z");
-  const endTime = new Date("2026-01-07T00:00:00Z");
+  const startTime = new Date("2025-03-18T18:39:00Z");
+  const endTime = new Date("2025-03-22T18:39:00Z");
 
   const questionsVisible = now >= startTime && now <= endTime;
 
@@ -29,7 +29,7 @@ export const load = async ({ locals }) => {
       querySnapshot.docs.forEach((d) => {
         let data = d.data();
         data['answer'] = null;
-        data['creator'] = null;
+        // data['creator'] = null;
         questions.push(data);
       });
 
@@ -38,7 +38,7 @@ export const load = async ({ locals }) => {
         newSnapshot.docs.forEach((d) => {
           let newData = d.data();
           newData['answer'] = null;
-          newData['creator'] = null;
+          // newData['creator'] = null;
           newQuestions.push(newData);
         });
         questions = newQuestions;

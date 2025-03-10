@@ -22,24 +22,6 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         return error(401, 'Unauthorized');
     }
 
-    const userDoc = await adminDB.collection('/users').doc(locals.userID).get();
-    const teamId = userDoc.data().team;
-    const team = await adminDB.collection('/teams').doc(teamId).get();
-    const level = team.data().level;
-    let isAdmin = false;
-    try {
-        if (userDoc.exists) {
-            const userData = userDoc.data();
-            isAdmin = userData?.role === 'admin';
-        } else {
-            console.error('User not found in database');
-        }
-    } catch (error) {
-        console.error('Error fetching user data:', error);
-    }
-    const now = new Date();
-    const startTime = new Date("2025-01-03T11:30:00Z");
-    const endTime = new Date("2026-01-07T00:00:00Z");
     const questionsVisible = now >= startTime && now <= endTime;
     if (!isAdmin && !questionsVisible) return error(405, "Method Not Allowed");
 

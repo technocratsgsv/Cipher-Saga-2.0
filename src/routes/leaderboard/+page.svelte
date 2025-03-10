@@ -37,7 +37,7 @@
         }
     }
 </script>
-<title>CryptIQ - Leaderboard</title>
+<title>Cipher Saga 2.0 - Leaderboard</title>
 <h2 class="mt-8 bg-gradient-to-br from-slate-300 to-primary bg-clip-text py-4 text-center text-7xl font-medium tracking-tight text-transparent">
     Leaderboard
 
@@ -77,7 +77,7 @@
             {#each rest as team,teamIndex}
                 <tr class="text-sm md:text-xl">
                     <th class="font-mono">#{teamIndex+4} </th>
-                    <td class="font-bold break-words max-w-[150px] whitespace-normal">{team.teamName} {#if !team.iitm}<div class="badge badge-error badge-outline">Non-IIT</div>{/if} {#if team.teamName == "Organizers"}<div class="badge badge-success badge-outline">Boss</div>{/if}</td>
+                    <td class="font-bold break-words max-w-[150px] whitespace-normal">{team.teamName} {#if !team.gsv}<div class="badge badge-error badge-outline">Non-GSV</div>{/if} {#if team.teamName == "Organizers"}<div class="badge badge-success badge-outline">Event Heads</div>{/if}</td>
                     <td>{team.members}</td>
                     <td>{team.score}</td>
                 </tr>

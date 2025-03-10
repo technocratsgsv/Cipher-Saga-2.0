@@ -4,14 +4,15 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBMcEQtQzM3qfaJah_IiB8pSOoSMqiE_jk",
-    authDomain: "iitm-cs.firebaseapp.com",
-    projectId: "iitm-cs",
-    storageBucket: "iitm-cs.firebasestorage.app",
-    messagingSenderId: "674187742486",
-    appId: "1:674187742486:web:49e5cb9d3fb767448b9437",
-    measurementId: "G-MRFQRV3SQF"
-};
+    apiKey: "AIzaSyA1kW57JODAX9F1uWuYOp-o9LtWgdp3Biw",
+    authDomain: "ciphersaga-gsv.firebaseapp.com",
+    databaseURL: "https://ciphersaga-gsv-default-rtdb.firebaseio.com",
+    projectId: "ciphersaga-gsv",
+    storageBucket: "ciphersaga-gsv.firebasestorage.app",
+    messagingSenderId: "1028866915285",
+    appId: "1:1028866915285:web:38fa18229daf6f8ee29b5c",
+    measurementId: "G-K5MTVTEW0J"
+  };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
