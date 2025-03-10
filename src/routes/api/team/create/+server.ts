@@ -22,9 +22,6 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         return error(401, 'Unauthorized');
     }
 
-    const questionsVisible = now >= startTime && now <= endTime;
-    if (!isAdmin && !questionsVisible) return error(405, "Method Not Allowed");
-
     const body = await request.json();
     let { teamName } = body;
     if (teamName === undefined || teamName === null || teamName.trim() === "") return error(400, "Bad Request");
