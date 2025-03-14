@@ -87,7 +87,7 @@
                 >
                     <div class="pb-[3vh]">
                         <h2
-                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans font-bold text-transparent text-4xl md:text-6xl lg:text-7xl"
+                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent pb-[1vh]"
                         >
                             What is Cipher Saga 2.0?
                         </h2>
@@ -344,11 +344,19 @@
                         </p>
                     </div>
                     <div class="pb-[3vh]">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <h2
+                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-3xl font-bold text-transparent pb-[1vh]"
+                        >
+                            Our Team
+                        </h2>
+                    </div>
+                    <div class="pb-[4vh]">
+                        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
                                 <a href="">
+                                    <img src="https://i.ibb.co/vF6v1nF/Whats-App-Image-2025-03-13-at-9-40-35-PM.jpg" alt="Soham Wani" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
-                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
                                         Soham Wani
                                     </h2>
@@ -360,9 +368,10 @@
                                 >
                             </div>
                             <div class="flex flex-col items-center">
-                                <a href="">
+                                <a href="https://www.linkedin.com/in/shreya-mohanty-755529296/">
+                                    <img src="image.jpg" alt="Shreya Mohanty" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
-                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
                                         Shreya Mohanty
                                     </h2>
@@ -374,9 +383,10 @@
                                 >
                             </div>
                             <div class="flex flex-col items-center">
-                                <a href="">
+                                <a href="https://www.linkedin.com/in/rishav-kumar-2399241ab/">
+                                    <img src="https://i.ibb.co/tpyz2pZL/58198da2-d4f5-4e08-bbe8-085c751453ff.jpg" alt="Rishav Kumar" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
-                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
                                         Rishav Kumar
                                     </h2>
@@ -388,13 +398,38 @@
                                 >
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+                    </div>
+                    <div class="pb-[3vh]">
+                        <h2
+                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-3xl font-bold text-transparent pb-[1vh]"
+                        >
+                            Special Thanks
+                        </h2>
+                    </div>
+                    <div class="pb-[4vh]">
+                        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
-                                <a href="">
+                                <a href="https://www.linkedin.com/in/dr-anshika-srivastava-933bbb1b7/">
+                                    <img src="https://i.ibb.co/NT1B7nJ/1703908262735.jpg" alt="Dr. Anshika Srivastava" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
-                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
-                                        Dr. Anshika Srivastav
+                                        Dr. Anshika Srivastava
+                                    </h2>
+                                    <p
+                                        class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
+                                    >
+                                        (Faculty Advisor)
+                                    </p></a
+                                >
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <a href="https://www.linkedin.com/in/dr-sonu-lamba-2a385694/">
+                                    <img src="https://i.ibb.co/6cfXncPm/1736622240889.jpg" alt="Dr. Sona Lamba" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <h2
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
+                                    >
+                                        Dr. Sona Lamba
                                     </h2>
                                     <p
                                         class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
@@ -405,19 +440,27 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="">
+                                    <img src="https://i.ibb.co/qM2wVX1z/Logo.png" alt="TechnoCrats" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
-                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-2xl font-bold text-transparent"
+                                        class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
-                                        Dr. Sonu Lamba
+                                        TechnoCrats
                                     </h2>
                                     <p
                                         class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
                                     >
-                                        (Faculty Advisor)
+                                        (Conducted By)
                                     </p></a
                                 >
                             </div>
                         </div>
+                    </div>
+                    <div class="pb-[4vh]">
+                        <h2
+                            class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-l font-bold text-transparent pb-[1vh]"
+                        >
+                            Also a special thanks to Student Cell @ GSV and Epitome'25 organising committee for supoorting us throughout
+                        </h2>
                     </div>
                 </div>
             </div>

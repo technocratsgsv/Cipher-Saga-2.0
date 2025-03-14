@@ -17,7 +17,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         try {
             if (userDoc.exists) {
                 const userData = userDoc.data();
-                isAdmin = userData?.role === 'admin';
+                isAdmin = userData?.role === 'admin' || userData?.role === 'exception';
             } else {
                 console.error('User not found in database');
             }
@@ -26,9 +26,6 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         }
         const now = new Date();
         const startTime = new Date("2025-03-18T18:39:00Z");
-        const endTime = new Date("2025-03-22T18:39:00Z");
-        const questionsVisible = now >= startTime && now <= endTime;
-        if (!isAdmin && !questionsVisible) return error(405, "Method Not Allowed");
 
         await adminDB.runTransaction(async (transaction) => {
             const userRef = adminDB.collection('users').doc(locals.userID!);
@@ -37,6 +34,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             const userIndexRef = adminDB.collection('index').doc('userIndex');
 
             const teamData = (await transaction.get(teamRef)).data();
+            if (!(now <= startTime) && !isAdmin) return error(405, "Method Not Allowed");
             if (teamData === undefined) return error(404, "Not Found");
             let newMembers = teamData.members.filter((e) => e !== locals.userID);
             if (newMembers.length === 0) {
@@ -72,6 +70,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             userIndexData[locals.userID] = null
             await transaction.update(userIndexRef, userIndexData);
         });
+        return json({ success: true, message: "Successfully left the team" }, { status: 200 });
     }
 
 
