@@ -354,7 +354,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
                                 <a href="">
-                                    <img src="https://i.ibb.co/vF6v1nF/Whats-App-Image-2025-03-13-at-9-40-35-PM.jpg" alt="Soham Wani" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/vF6v1nF/Whats-App-Image-2025-03-13-at-9-40-35-PM.jpg" alt="Soham Wani" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
@@ -369,7 +369,7 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/shreya-mohanty-755529296/">
-                                    <img src="https://i.ibb.co/d4v8xBmj/IMG-20250314-WA0093.jpg" alt="Shreya Mohanty" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/d4v8xBmj/IMG-20250314-WA0093.jpg" alt="Shreya Mohanty" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
@@ -384,7 +384,7 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/rishav-kumar-2399241ab/">
-                                    <img src="https://i.ibb.co/tpyz2pZL/58198da2-d4f5-4e08-bbe8-085c751453ff.jpg" alt="Rishav Kumar" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/tpyz2pZL/58198da2-d4f5-4e08-bbe8-085c751453ff.jpg" alt="Rishav Kumar" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
@@ -410,7 +410,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/dr-anshika-srivastava-933bbb1b7/">
-                                    <img src="https://i.ibb.co/NT1B7nJ/1703908262735.jpg" alt="Dr. Anshika Srivastava" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/NT1B7nJ/1703908262735.jpg" alt="Dr. Anshika Srivastava" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
@@ -425,7 +425,7 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/dr-sonu-lamba-2a385694/">
-                                    <img src="https://i.ibb.co/6cfXncPm/1736622240889.jpg" alt="Dr. Sona Lamba" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/6cfXncPm/1736622240889.jpg" alt="Dr. Sona Lamba" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
@@ -440,7 +440,7 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="">
-                                    <img src="https://i.ibb.co/qM2wVX1z/Logo.png" alt="TechnoCrats" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/qM2wVX1z/Logo.png" alt="TechnoCrats" class="w-20 h-20 rounded-full mb-2 mx-auto" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
