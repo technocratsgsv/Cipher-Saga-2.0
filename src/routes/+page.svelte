@@ -369,7 +369,7 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/shreya-mohanty-755529296/">
-                                    <img src="image.jpg" alt="Shreya Mohanty" class="w-16 h-16 rounded-full mb-2 mx-auto" />
+                                    <img src="https://i.ibb.co/d4v8xBmj/IMG-20250314-WA0093.jpg" alt="Shreya Mohanty" class="w-16 h-16 rounded-full mb-2 mx-auto" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
