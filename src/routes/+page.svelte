@@ -336,6 +336,9 @@
                                 be encoded in these forms, often hidden within clues
                                 or images.
                             </li>
+                            <li>
+                                <strong>Geocodes:</strong> Sometimes, when there are random numbers on the screen, try using geocoding sites that can make you arrive at the next clue. Try puting those coordinates in Google maps or geocoding sites like geocode.xyz. Another site called geoapify.com can prove useful as well. Try lingering with the words and get to sites like what3words or any other popular and unique geocoding software.
+                            </li>
                         </ul>
                         <p
                             class="relative z-10 text-justify text-sm text-neutral-400"
