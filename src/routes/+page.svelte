@@ -428,11 +428,11 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <a href="https://www.linkedin.com/in/dr-sonu-lamba-2a385694/">
-                                    <img src="https://i.ibb.co/6cfXncPm/1736622240889.jpg" alt="Dr. Sona Lamba" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
+                                    <img src="https://i.ibb.co/6cfXncPm/1736622240889.jpg" alt="Dr. Sonu Lamba" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
-                                        Dr. Sona Lamba
+                                        Dr. Sonu Lamba
                                     </h2>
                                     <p
                                         class="relative z-10 text-center text-sm text-neutral-400 pb-[1vh]"
