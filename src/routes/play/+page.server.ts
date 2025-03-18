@@ -29,7 +29,7 @@ export const load = async ({ locals }) => {
       querySnapshot.docs.forEach((d) => {
         let data = d.data();
         data['answer'] = null;
-        // data['creator'] = null;
+        data['creator'] = null;
         questions.push(data);
       });
 
@@ -38,7 +38,7 @@ export const load = async ({ locals }) => {
         newSnapshot.docs.forEach((d) => {
           let newData = d.data();
           newData['answer'] = null;
-          // newData['creator'] = null;
+          newData['creator'] = null;
           newQuestions.push(newData);
         });
         questions = newQuestions;
