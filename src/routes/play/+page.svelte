@@ -62,7 +62,7 @@
 
     $: currQuestionData, updateComment();
 </script>
-<title>Cipher Sagar 2.0 - Play</title>
+<title>Cipher Saga 2.0 - Play</title>
 {#if questions.length > 0}
     <Doc ref={`/teams/${data.locals.userTeam}`} let:data={teamData}>
         <p slot="loading" class="loading"></p>
