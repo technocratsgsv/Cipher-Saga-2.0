@@ -6,7 +6,6 @@ import { getStorage } from "firebase/storage";
 const firebaseConfig = {
     apiKey: "AIzaSyA1kW57JODAX9F1uWuYOp-o9LtWgdp3Biw",
     authDomain: "ciphersaga-gsv.firebaseapp.com",
-    databaseURL: "https://ciphersaga-gsv-default-rtdb.firebaseio.com",
     projectId: "ciphersaga-gsv",
     storageBucket: "ciphersaga-gsv.firebasestorage.app",
     messagingSenderId: "1028866915285",
