@@ -357,7 +357,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="flex flex-col items-center">
                                 <a href="">
-                                    <img src="https://i.ibb.co/vF6v1nF/Whats-App-Image-2025-03-13-at-9-40-35-PM.jpg" alt="Soham Wani" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
+                                    <img src="https://i.ibb.co/whYZ0Ws3/Whats-App-Image-2025-03-13-at-9-40-35-PM.jpg" alt="Soham Wani" class="w-20 h-20 rounded-full mb-2 mx-auto object-cover" />
                                     <h2
                                         class="relative z-10 bg-gradient-to-b from-neutral-200 to-primary bg-clip-text text-center font-sans text-xl font-bold text-transparent"
                                     >
