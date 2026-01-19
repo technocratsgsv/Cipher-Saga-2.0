@@ -14,7 +14,7 @@ export const load = async ({ locals }) => {
 
   const now = new Date();
   const startTime = new Date("2026-01-19T13:15:00Z");
-  const endTime = new Date("2026-03-19T14:30:00Z");
+  const endTime = new Date("2026-01-19T14:30:00Z");
 
   const questionsVisible = now >= startTime && now <= endTime;
 
